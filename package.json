@@ -2,7 +2,8 @@
   "name": "ripejs",
   "version": "0.1.0",
   "description": "A JS Client for querying and updating RIPE DB",
-  "main": "index.js",
+  "main": "index.ts",
+  "type": "module",
   "directories": {
     "example": "example"
   },

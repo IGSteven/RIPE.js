@@ -10,7 +10,7 @@
 */ 
 
 // Load the Requirements 
-const RIPE = require('./../') // Note this will be diffrent for you.
+import { RIPE } from './../index';
 const client = new RIPE();
 
 // This will only work within a Asynchronous Eviroment
