@@ -15,17 +15,37 @@ const axios = require('axios');
 
 // Client Class
 class client extends EventEmitter {
-    contructor({ dev: false }){ 
-        super() // Load EventEmitter.
-        this.loggedin = false
-        this.token = null // We define this by doing login() as some people won't need to make changes.  
-        if (dev) this.apiurl = "https://rest-test.db.ripe.net/test" // Use TEST DB
-        else this.apiurl = "https://rest.db.ripe.net/ripe" // Use LIVE DB
+    contructor({ dev = false }){ 
+        Super() // Load EventEmitter.
+
+        loggedin = false
+        token = null // We define this by doing login()
     }
+
+    query = async function (t="whois", p={}) {
+        // Identify Type and Build Request.
+        var request = {};  
+        switch(t.toLowerCase()){
+            case "whois": request = { url: 'https://stat.ripe.net/data/whois/data.json', method: 'get', params: { resourse: p }};
+            default: {
+                try {
+                    if (request === {}) break;
+                    let response = await axios(request)
+                    return(response);
+                } catch (error) { console.log(error) }
+            } 
+        }
+    }
+
     login = async function (input){
         this.token = input;
         this.loggedin = true;
         // Will make this more advanced in a future update, to ensure the Token works.
+    }
+
+    test = async function () {
+        let r = this.query('whois', "as42831");
+        console.log(r)
     }
 }
 

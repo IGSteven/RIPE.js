@@ -1,0 +1,35 @@
+{
+  "name": "ripejs",
+  "version": "0.1.0",
+  "description": "A JS Client for querying and updating RIPE DB",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGSteven/RIPEjs.git"
+  },
+  "author": {
+    "name": "Steven Smith",
+    "email": "me@igsteven.com",
+    "url": "http://github.com/igsteven"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/IGSteven/RIPEjs/issues"
+  },
+  "homepage": "https://github.com/IGSteven/RIPEjs#readme",
+  "funding": [
+    {
+      "type": "kofi",
+      "url": "https://ko-fi.com/igsteven"
+    }
+  ],
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
