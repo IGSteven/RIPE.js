@@ -11,15 +11,13 @@
 
 // Load the Requirements 
 import { RIPE } from './../index';
-const client = new RIPE();
+const client = new RIPE.client();
 
 // This will only work within a Asynchronous Eviroment
 const main = async ()=>{
 
     // We now can run the .whois() function to find the Autonomous System (AS)
     let AS = await client.whois('as42831') // In this example, We are using UKSERVERS-AS.
-    console.log(JSON.stringify(AS));
-
 }
 
 main()
